@@ -82,7 +82,7 @@
     <a href="#" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">My ecommerce</span>
+      <span class="brand-text font-weight-light">All You Need</span>
     </a>
 
     <!-- Sidebar -->
@@ -107,10 +107,16 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="panel.php?modulo=estadisticas" class="nav-link <?php  echo ($modulo=="estadisticas" || $modulo =="")?" active ":" ";  ?>">
                   <i class="fas fa-chart-bar nav-icon  "></i>
                   <p>Estadisticas</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="panel.php?modulo=productos" class="nav-link <?php  echo ($modulo=="productos")?" active ":" ";  ?>">
+                  <i class="fa fa-shopping-bag nav-icon" aria-hidden="true"></i>
+                  <p>Productos</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -120,17 +126,17 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="panel.php?modulo=productos" class="nav-link <?php  echo ($modulo=="productos")?" active ":" ";  ?>">
-                  <i class="fa fa-shopping-bag nav-icon" aria-hidden="true"></i>
-                  <p>Productos</p>
+                <a href="panel.php?modulo=clientes" class="nav-link <?php  echo ($modulo=="clientes")?" active ":" ";  ?>">
+                  <i class="far fa-user nav-icon"></i>
+                  <p>Clientes</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="panel.php?modulo=ventas" class="nav-link <?php  echo ($modulo=="ventas")?" active ":" ";  ?>">
                   <i class="fa fa-table nav-icon" aria-hidden="true"></i>
                   <p>Ventas</p>
                 </a>
-              </li>
+              </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -150,13 +156,13 @@
     </div>
     <?php
   }
-    if($modulo=="estadisticas" || $modulo==""){    
+    if($modulo=="estadisticas"){    
       include_once "estadisticas.php";
     }
     if($modulo=="usuarios"){    
       include_once "usuarios.php";
     }
-    if($modulo=="productos"){    
+    if($modulo=="productos" || $modulo==""){    
       include_once "productos.php";
     }
     if($modulo=="ventas"){    
@@ -170,6 +176,9 @@
     }
     if($modulo=="productos"){
       include_once "productos.php";
+    }
+    if($modulo== "clientes"){
+      include_once "clientes.php";
     }
   ?>
 

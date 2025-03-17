@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-03-2025 a las 02:54:51
+-- Tiempo de generación: 17-03-2025 a las 04:24:54
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -31,8 +31,17 @@ CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,
   `pass` varchar(255) NOT NULL,
-  `nombre` varchar(255) NOT NULL
+  `nombre` varchar(255) NOT NULL,
+  `direccion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `email`, `pass`, `nombre`, `direccion`) VALUES
+(5, 'cliente@gmail.com', '4983a0ab83ed86e0e7213c8783940193', 'Cliente', ''),
+(6, 'lucas@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Lucas', 'El jaguel');
 
 -- --------------------------------------------------------
 
@@ -76,7 +85,33 @@ INSERT INTO `files` (`id`, `filename`, `filesize`, `web_path`, `system_path`, `t
 (5, 'coca2.25L.webp', 8928, '/AllYouNeed/uploads/5.webp', 'C:/xampp/htdocs/AllYouNeed/uploads/5.webp', 0),
 (6, 'cocacola500ml.jpg', 86821, '/AllYouNeed/uploads/6.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/6.jpg', 0),
 (7, 'coca2.25L.webp', 8928, '/AllYouNeed/uploads/7.webp', 'C:/xampp/htdocs/AllYouNeed/uploads/7.webp', 0),
-(8, 'cocacola2.25l.webp', 22588, '/AllYouNeed/uploads/8.webp', 'C:/xampp/htdocs/AllYouNeed/uploads/8.webp', 0);
+(8, 'cocacola2.25l.webp', 22588, '/AllYouNeed/uploads/8.webp', 'C:/xampp/htdocs/AllYouNeed/uploads/8.webp', 0),
+(9, '26.jpg', 57587, '/AllYouNeed/uploads/9.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/9.jpg', 0),
+(10, '27.jpg', 70566, '/AllYouNeed/uploads/10.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/10.jpg', 0),
+(11, '21.jpg', 70211, '/AllYouNeed/uploads/11.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/11.jpg', 0),
+(12, '22.jpg', 22189, '/AllYouNeed/uploads/12.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/12.jpg', 0),
+(13, '19.jpg', 24214, '/AllYouNeed/uploads/13.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/13.jpg', 0),
+(14, '20.jpg', 23931, '/AllYouNeed/uploads/14.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/14.jpg', 0),
+(15, '24.jpg', 78529, '/AllYouNeed/uploads/15.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/15.jpg', 0),
+(16, '25.jpg', 80653, '/AllYouNeed/uploads/16.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/16.jpg', 0),
+(17, '23.jpg', 33754, '/AllYouNeed/uploads/17.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/17.jpg', 0),
+(18, '30.jpg', 59200, '/AllYouNeed/uploads/18.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/18.jpg', 0),
+(19, '31.jpg', 96428, '/AllYouNeed/uploads/19.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/19.jpg', 0),
+(20, '28.jpg', 39358, '/AllYouNeed/uploads/20.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/20.jpg', 0),
+(21, '29.jpg', 20467, '/AllYouNeed/uploads/21.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/21.jpg', 0),
+(22, '27.jpg', 70566, '/AllYouNeed/uploads/22.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/22.jpg', 0),
+(23, '26.jpg', 57587, '/AllYouNeed/uploads/23.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/23.jpg', 0),
+(24, '22.jpg', 22189, '/AllYouNeed/uploads/24.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/24.jpg', 0),
+(25, '21.jpg', 70211, '/AllYouNeed/uploads/25.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/25.jpg', 0),
+(26, '20.jpg', 23931, '/AllYouNeed/uploads/26.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/26.jpg', 0),
+(27, '19.jpg', 24214, '/AllYouNeed/uploads/27.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/27.jpg', 0),
+(28, '25.jpg', 80653, '/AllYouNeed/uploads/28.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/28.jpg', 0),
+(29, '24.jpg', 78529, '/AllYouNeed/uploads/29.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/29.jpg', 0),
+(30, '40.jpg', 33754, '/AllYouNeed/uploads/30.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/30.jpg', 0),
+(31, '31.jpg', 96428, '/AllYouNeed/uploads/31.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/31.jpg', 0),
+(32, '30.jpg', 59200, '/AllYouNeed/uploads/32.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/32.jpg', 0),
+(33, '29.jpg', 20467, '/AllYouNeed/uploads/33.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/33.jpg', 0),
+(34, '28.jpg', 39358, '/AllYouNeed/uploads/34.jpg', 'C:/xampp/htdocs/AllYouNeed/uploads/34.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +131,20 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `precio`, `existencia`) VALUES
-(2, 'Coca Cola 2lts', 3000, 50);
+(3, 'Agua', 500, 10),
+(4, 'Celular', 200000, 5),
+(5, 'Lavadora', 300000, 10),
+(6, 'Leche', 1500, 10),
+(7, 'Sillon', 80000, 1),
+(8, 'Televisión', 200000, 5),
+(9, 'Zanahoria', 800, 10),
+(10, 'Agua 2', 750, 10),
+(11, 'Celular 2', 250000, 5),
+(12, 'Lavadora 2', 290000, 10),
+(13, 'Leche 2', 1600, 20),
+(14, 'Sillón 2', 90000, 5),
+(15, 'Televisión 2', 195000, 7),
+(16, 'Zanahoria 2', 1000, 25);
 
 -- --------------------------------------------------------
 
@@ -114,7 +162,32 @@ CREATE TABLE `productos_files` (
 --
 
 INSERT INTO `productos_files` (`producto_id`, `file_id`) VALUES
-(2, 8);
+(3, 9),
+(3, 10),
+(4, 11),
+(4, 12),
+(6, 15),
+(6, 16),
+(7, 17),
+(8, 18),
+(8, 19),
+(9, 20),
+(9, 21),
+(10, 22),
+(10, 23),
+(11, 24),
+(11, 25),
+(12, 26),
+(12, 27),
+(5, 13),
+(5, 14),
+(13, 28),
+(13, 29),
+(14, 30),
+(15, 31),
+(15, 32),
+(16, 33),
+(16, 34);
 
 -- --------------------------------------------------------
 
@@ -135,7 +208,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `email`, `pass`, `nombre`) VALUES
 (1, 'vlucas@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Lucas'),
-(2, 'lanky@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Lankyros');
+(2, 'lanky@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Lankyros'),
+(4, 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -157,7 +231,8 @@ CREATE TABLE `ventas` (
 -- Indices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `kEmail` (`email`);
 
 --
 -- Indices de la tabla `detalleventas`
@@ -200,7 +275,7 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `detalleventas`
@@ -212,19 +287,19 @@ ALTER TABLE `detalleventas`
 -- AUTO_INCREMENT de la tabla `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
